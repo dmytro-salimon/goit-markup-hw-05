@@ -2,6 +2,7 @@
   :root {
     /* Colors */
     --white: 255 255 255;
+    --dairy: 252 252 252;
     --navy-blue: 46 47 66;
     --cloud: 244 244 253;
     --cornflower: 231 233 252;
@@ -10,12 +11,14 @@
     --gray: 46 47 66;
     --light-slate: 142 143 153;
     --green: 49 208 170;
+    --black: 0 0 0;
 
     /* Typo Color */
     --typo-light-pr: 255 255 255;
     --typo-light-sec: 244 244 253;
     --typo-dark-pr: 46 47 66;
     --typo-dark-sec: 67 68 85;
+    --typo-dark-ter: 142 143 153;
 
     /* Others */
       --items: 4;
@@ -27,6 +30,10 @@
       --shadow: 0px 1px 6px 0px rgb(var(--navy-blue) / 8%),
       0px 1px 1px 0px rgb(var(--navy-blue) / 16%),
       0px 2px 1px 0px rgb(var(--navy-blue) / 8%);
+
+      --modal-shadow: 0px 2px 1px 0px rgb(var(--black) / 20%),
+        0px 1px 3px 0px rgb(var(--black) / 12%),
+        0px 1px 1px 0px rgb(var(--black) / 14%);
   }
 
 /* #endregion */
@@ -268,6 +275,7 @@
     color: rgb(var(--typo-light-pr));
     border: none;
     border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgb(var(--black) / 15%);
 
     transition: var(--anim);
     transition-property: background-color;
@@ -522,4 +530,146 @@
     background-color: rgb(var(--green));
   }
 
+/* #endregion */
+
+
+/* #region Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(var(--navy-blue) / 40%);
+    }
+  
+    .modal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      max-width: 408px;
+      width: 90%;
+      min-height: 584px;
+      padding: 24px;
+      padding-top: 72px;
+      
+      border-radius: 4px;
+      background:rgb(var(--dairy));
+      box-shadow: var(--modal-shadow);
+    }
+  
+    .modal-btn {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 24px;
+      height: 24px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: rgb(var(--cornflower));
+      border: 1px solid rgb(var(--black) / 10%);
+      border-radius: 50%;
+
+      transition: var(--anim);
+      transition-property: background-color, border;
+    }
+
+    .modal-btn:hover,
+    .modal-btn:focus {
+      background-color: rgb(var(--ocean));
+      border: none;
+    }
+
+    .modal-btn-icon {
+      fill: rgb(var(--navy-blue));
+
+      transition: var(--anim);
+      transition-property: fill;
+    }
+
+    .modal-btn:hover .modal-btn-icon,
+    .modal-btn:focus .modal-btn-icon {
+      fill: rgb(var(--white));
+    }
+
+    .modal-title {
+      margin-bottom: 16px;
+      text-align: center;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+
+      color: rgb(var(--typo-dark-pr));
+    }
+
+    /*Form*/
+
+    .ordering-form {}
+    
+    .form-wrapper {
+      margin-bottom: 8px;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.16;
+      letter-spacing: 0.04em;
+
+      color: rgb(var(--typo-dark-ter));
+    }
+    
+    .form-field {
+      position: relative;
+    }
+    
+    .form-input {
+      display: block;
+      width: 100%;
+      height: 40px;
+      padding: 11px 16px 11px 38px;
+      border-radius: 4px;
+      border: 1px solid rgb(var(--navy-blue) / 40%);
+      outline: transparent;
+
+      transition: var(--anim);
+      transition-property: border-color;
+    }
+
+    .form-input:focus {
+      border-color: rgb(var(--iris));
+    }
+
+    .form-input:focus + .form-icon{
+      fill: rgb(var(--iris));
+    }
+    
+    .form-icon {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      transition: var(--anim);
+      transition-property: fill;
+      pointer-events: none;
+    }
+    
+    .form-comment {}
+    
+    .form-agreement {}
+    
+    .checkbox {}
+    
+    .checkbox-icon {}
+    
+    .form-agreement-text {}
+    
+    .form-agreement-link {}
+    
+    .btn {}
 /* #endregion */
