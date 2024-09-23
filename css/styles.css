@@ -556,7 +556,7 @@
     display: block;
     width: 264px;
     height: 40px;
-    padding: 8px 16px;
+    padding-left: 16px;
 
     font-size: 12px;
     line-height: 2;
@@ -582,6 +582,7 @@
     min-width: 165px;
     height: 40px;
     padding: 8px 24px;
+    cursor: pointer;
 
     font-weight: 500;
     line-height: 1.5;
@@ -640,7 +641,7 @@
       opacity: 0;
 
       transition: var(--anim);
-      transition-property: opacity;
+      transition-property: opacity, transform;
     }
 
     .modal-overlay.is-open .modal{
@@ -794,9 +795,10 @@
       width: 16px;
       height: 16px;
 
-      border-radius: 2px;
       border: 1px solid rgb(var(--navy-blue) / 40%);
+      border-radius: 2px;
       background-color: transparent;
+      fill: transparent;
       
       transition: var(--anim);
       transition-property: border, background-color, fill;
