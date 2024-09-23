@@ -640,8 +640,9 @@
       box-shadow: var(--modal-shadow);
       opacity: 0;
 
-      transition: var(--anim);
-      transition-property: transform;
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      /*transition: var(--anim);
+      transition-property: transform;*/
     }
 
     .modal-overlay.is-open .modal{
@@ -796,7 +797,8 @@
       height: 16px;
 
       border-radius: 2px;
-      border: 1px solid rgb(var(--navy-blue) / 40%);
+      border: 1px solid rgba(46, 47, 66, 0.4);
+      /*border: 1px solid rgb(var(--navy-blue) / 40%);*/
       background-color: transparent;
       fill: transparent;
       
@@ -806,8 +808,10 @@
     }
 
     input[type='checkbox']:checked + label .checkbox {
-      background-color: rgb(var(--ocean));
+      background-color: var(--ocean, #404bbf);
       border: none;
+      /*background-color: rgb(var(--ocean));
+      border: none;*/
     }
 
     input[type='checkbox']:focus-visible + label .checkbox {
@@ -823,7 +827,8 @@
     }
 
     input[type='checkbox']:checked + label .checkbox-icon {
-      fill: rgb(var(--cloud));
+      fill: var(--cloud, #F4F4FD);
+      /*fill: rgb(var(--cloud));*/
     }
     
     .form-agreement-text {
