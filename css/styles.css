@@ -641,7 +641,7 @@
       opacity: 0;
 
       transition: var(--anim);
-      transition-property: opacity, transform;
+      transition-property: transform;
     }
 
     .modal-overlay.is-open .modal{
@@ -795,8 +795,8 @@
       width: 16px;
       height: 16px;
 
-      border: 1px solid rgb(var(--navy-blue) / 40%);
       border-radius: 2px;
+      border: 1px solid rgb(var(--navy-blue) / 40%);
       background-color: transparent;
       fill: transparent;
       
