@@ -549,6 +549,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 24px;
   }
   
   .subscribe-input {
@@ -556,7 +557,6 @@
     width: 264px;
     height: 40px;
     padding: 8px 16px;
-    margin-right: 24px;
 
     font-size: 12px;
     line-height: 2;
@@ -566,6 +566,7 @@
     border-radius: 4px;
     border: 1px solid rgb(var(--white));
     outline: transparent;
+    box-shadow: 0px 4px 4px rgb(var(--black) / 15%);
 
     color: rgb(var(--typo-light-pr));
   }
@@ -578,9 +579,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 165px;
     height: 40px;
     padding: 8px 24px;
-    gap: 16px;
 
     font-weight: 500;
     line-height: 1.5;
@@ -593,6 +594,7 @@
   }
   
   .subscribe-form-icon {
+    margin-left: 16px;
     fill: rgb(var(--white));
   }
 
@@ -652,6 +654,7 @@
       right: 24px;
       width: 24px;
       height: 24px;
+      padding: 0;
 
       display: flex;
       justify-content: center;
@@ -698,13 +701,17 @@
     .form-wrapper {
       margin-bottom: 8px;
     }
+
+    .form-wrapper.comment {
+      margin-bottom: 16px;
+    }
     
     .form-label {
       display: block;
       margin-bottom: 4px;
       font-size: 12px;
       font-weight: 400;
-      line-height: 1.16;
+      line-height: 1.17;
       letter-spacing: 0.04em;
 
       color: rgb(var(--typo-dark-ter));
@@ -722,6 +729,7 @@
       border-radius: 4px;
       border: 1px solid rgb(var(--navy-blue) / 40%);
       outline: transparent;
+      background-color: transparent;
 
       transition: var(--anim);
       transition-property: border-color;
@@ -753,12 +761,14 @@
       padding: 8px 16px;
 
       font-size: 12px;
-      line-height: 1.16;
+      line-height: 1.17;
       letter-spacing: 0.04em;
+      color: rgb(var(--typo-dark-pr) / 40%);
 
       border-radius: 4px;
       border: 1px solid rgb(var(--navy-blue) / 40%);
       outline: transparent;
+      background-color: transparent;
 
       transition: var(--anim);
       transition-property: border-color;
@@ -786,37 +796,37 @@
 
       border-radius: 2px;
       border: 1px solid rgb(var(--navy-blue) / 40%);
-
+      background-color: transparent;
+      
       transition: var(--anim);
-      transition-property: border-color;
+      transition-property: border, background-color, fill;
       cursor: pointer;
     }
 
-    input[type='checkbox']:checked + .checkbox {
+    input[type='checkbox']:checked + label .checkbox {
       background-color: rgb(var(--ocean));
-      border-color: transparent;
+      border: none;
     }
 
-    input[type='checkbox']:focus-visible + .checkbox {
+    input[type='checkbox']:focus-visible + label .checkbox {
       outline: 2px solid rgb(var(--ocean));
       outline-offset: 2px;
     }
     
     .checkbox-icon {
-      fill: rgb(var(--cloud));
-      opacity: 0;
+      fill: transparent;
 
       transition: var(--anim);
-      transition-property: opacity;
+      transition-property: fill;
     }
 
-    input[type='checkbox']:checked + .checkbox > .checkbox-icon {
-      opacity: 1;
+    input[type='checkbox']:checked + label .checkbox-icon {
+      fill: rgb(var(--cloud));
     }
     
     .form-agreement-text {
       font-size: 12px;
-      line-height: 1.16;
+      line-height: 1.17;
       letter-spacing: 0.04em;
 
       color: rgb(var(--typo-dark-ter));
