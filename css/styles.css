@@ -804,10 +804,10 @@
       cursor: pointer;
     }
 
-    input[type='checkbox']:checked + label .checkbox {
+    /*input[type='checkbox']:checked + label .checkbox {
       background-color: rgb(var(--ocean));
       border: none;
-    }
+    }*/
 
     /*input[type='checkbox']:focus-visible + label .checkbox {
       outline: 2px solid rgb(var(--ocean));
