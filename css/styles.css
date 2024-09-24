@@ -795,11 +795,9 @@
       height: 16px;
 
       border-radius: 2px;
-      background-color: rgb(var(--ocean));
-      border: none;
-      /*border: 1px solid rgb(var(--navy-blue) / 40%);
+      border: 1px solid rgb(var(--navy-blue) / 40%);
       background-color: transparent;
-      fill: transparent;*/
+      fill: transparent;
       
       transition: var(--anim);
       transition-property: border, background-color, fill;
@@ -811,14 +809,18 @@
       border: none;
     }*/
 
+    input[type='checkbox'] + label .checkbox {
+      background-color: rgb(var(--ocean));
+      border: none;
+    }
+
     /*input[type='checkbox']:focus-visible + label .checkbox {
       outline: 2px solid rgb(var(--ocean));
       outline-offset: 2px;
     }*/
     
     .checkbox-icon {
-      fill: rgb(var(--cloud));
-      /*fill: transparent;*/
+      fill: transparent;
 
       transition: var(--anim);
       transition-property: fill;
@@ -827,6 +829,10 @@
     /*input[type='checkbox']:checked + label .checkbox-icon {
       fill: rgb(var(--cloud));
     }*/
+
+    input[type='checkbox'] + label .checkbox-icon {
+      fill: rgb(var(--cloud));
+    }
     
     .form-agreement-text {
       font-size: 12px;
