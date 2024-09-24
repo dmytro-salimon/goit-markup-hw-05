@@ -804,12 +804,7 @@
       cursor: pointer;
     }
 
-    /*input[type='checkbox']:checked + label .checkbox {
-      background-color: rgb(var(--ocean));
-      border: none;
-    }*/
-
-    input[type='checkbox'] + label .checkbox {
+    input[type='checkbox']:checked + label .checkbox {
       background-color: rgb(var(--ocean));
       border: none;
     }
@@ -826,11 +821,7 @@
       transition-property: fill;
     }
 
-    /*input[type='checkbox']:checked + label .checkbox-icon {
-      fill: rgb(var(--cloud));
-    }*/
-
-    input[type='checkbox'] + label .checkbox-icon {
+    input[type='checkbox']:checked + label .checkbox-icon {
       fill: rgb(var(--cloud));
     }
     
