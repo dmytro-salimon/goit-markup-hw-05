@@ -795,9 +795,11 @@
       height: 16px;
 
       border-radius: 2px;
-      border: 1px solid rgb(var(--navy-blue) / 40%);
+      background-color: rgb(var(--ocean));
+      border: none;
+      /*border: 1px solid rgb(var(--navy-blue) / 40%);
       background-color: transparent;
-      fill: transparent;
+      fill: transparent;*/
       
       transition: var(--anim);
       transition-property: border, background-color, fill;
@@ -815,7 +817,8 @@
     }*/
     
     .checkbox-icon {
-      fill: transparent;
+      fill: rgb(var(--cloud));
+      /*fill: transparent;*/
 
       transition: var(--anim);
       transition-property: fill;
