@@ -805,6 +805,7 @@
     }
 
     input[type='checkbox']:checked + label .checkbox {
+      fill: rgb(var(--cloud));
       background-color: rgb(var(--ocean));
       border: none;
     }
