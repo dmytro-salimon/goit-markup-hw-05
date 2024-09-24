@@ -646,7 +646,6 @@
 
     .modal-overlay.is-open .modal{
       opacity: 1;
-      transition-delay: 300ms;
     }
   
     .modal-btn {
@@ -810,10 +809,10 @@
       border: none;
     }
 
-    input[type='checkbox']:focus-visible + label .checkbox {
+    /*input[type='checkbox']:focus-visible + label .checkbox {
       outline: 2px solid rgb(var(--ocean));
       outline-offset: 2px;
-    }
+    }*/
     
     .checkbox-icon {
       fill: transparent;
