@@ -797,7 +797,6 @@
       border-radius: 2px;
       border: 1px solid rgb(var(--navy-blue) / 40%);
       background-color: transparent;
-      fill: transparent;
       
       transition: var(--anim);
       transition-property: border, background-color, fill;
@@ -811,7 +810,6 @@
 
     input[type='checkbox'] + label .checkbox {
       background-color: rgb(var(--ocean));
-      border: none;
     }
 
     /*input[type='checkbox']:focus-visible + label .checkbox {
