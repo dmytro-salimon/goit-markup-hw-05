@@ -821,9 +821,9 @@
       transition-property: fill;
     }
 
-    input[type='checkbox']:checked + label .checkbox-icon {
+    /*input[type='checkbox']:checked + label .checkbox-icon {
       fill: rgb(var(--cloud));
-    }
+    }*/
     
     .form-agreement-text {
       font-size: 12px;
